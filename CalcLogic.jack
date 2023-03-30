@@ -1,0 +1,54 @@
+/** the logic behind the jack calculator */
+
+class CalcLogic {
+    field int op1, op2;  // field = property = member variable.
+   
+    /** Constructs a (reduced) fraction from the given numerator and denominator. */
+    constructor CalcLogic new() {
+         let op1 = 0;
+         let op2 = 0;
+         return this;
+    }
+ 
+    // Reduces this fraction.
+    method int add(int a, int b) {
+         let op1 = a;
+         let op2 = b;
+         return op1 + op2;
+    }
+    
+    method int subtract(int a, int b) {
+         let op1 = a;
+         let op2 = b;
+         return op1 - op2;
+    }
+
+    method int divide(int a, int b) {
+         let op1 = a;
+         let op2 = b;
+         return op1 / op2;
+    }
+
+    method int multiply(int a, int b) {
+         let op1 = a;
+         let op2 = b;
+         return op1 * op2;
+    }
+
+    method in factorial(int a) {
+         let op1 = a;
+         let op2 = 1;
+         while (op1 > 0) {
+             let op2 = op2 * op1;
+             let op1 = op1 - 1;
+         }
+         return op2;
+    }
+ 
+    /** Disposes this fraction. */
+    method void dispose() {
+       do Memory.deAlloc(this);  // uses an OS routine to recycle the memory held by the object
+       return;
+    }
+ }
+ 

@@ -1,0 +1,10 @@
+class Main {
+    function void main() {
+        var CalcLogic calculator;
+        var int result;
+        let calculator = CalcLogic.new();
+        let result = calculator.add(1, 2);
+        do Output.printInt(result);
+        return;
+    }
+}
