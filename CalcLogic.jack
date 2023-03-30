@@ -1,7 +1,7 @@
 /** the logic behind the jack calculator */
 
 class CalcLogic {
-    field int op1, op2;  // field = property = member variable.
+    field int op1, op2, op3;  // field = property = member variable.
    
     /** Constructs a (reduced) fraction from the given numerator and denominator. */
     constructor CalcLogic new() {
@@ -43,6 +43,17 @@ class CalcLogic {
              let op1 = op1 - 1;
          }
          return op2;
+    }
+
+    method int power(int a, int b) {
+         let op1 = a;
+         let op2 = b;
+         let op3 = 1;
+         while (op2 > 0) {
+             let op3 = op3 * op1;
+             let op2 = op2 - 1;
+         }
+         return op3;
     }
  
     /** Disposes this fraction. */

@@ -1,5 +1,5 @@
 function CalcLogic.new 0
-push constant 2
+push constant 3
 call Memory.alloc 1
 pop pointer 0
 push constant 0
@@ -76,6 +76,33 @@ pop this 0
 goto WHILE_EXP0
 label WHILE_END0
 push this 1
+return
+function CalcLogic.power 0
+push argument 0
+pop pointer 0
+push argument 1
+pop this 0
+push argument 2
+pop this 1
+push constant 1
+pop this 2
+label WHILE_EXP0
+push this 1
+push constant 0
+gt
+not
+if-goto WHILE_END0
+push this 2
+push this 0
+call Math.multiply 2
+pop this 2
+push this 1
+push constant 1
+sub
+pop this 1
+goto WHILE_EXP0
+label WHILE_END0
+push this 2
 return
 function CalcLogic.dispose 0
 push argument 0
