@@ -3,8 +3,7 @@ call CalcLogic.new 0
 pop local 0
 push local 0
 push constant 5
-push constant 2
-call CalcLogic.power 3
+call CalcLogic.factorial 2
 pop local 1
 push local 1
 call Output.printInt 1
