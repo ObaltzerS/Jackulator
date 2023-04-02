@@ -1,17 +1,14 @@
 class Input {
-    
     field String expression;
+    static int op;
 
     constructor Input new(){
         return this;
     }
 
 
-    function void getExpression () {
-        //let expression = Keyboard.readLine();
-        //return expression;
-        return;
+    function int getOp () {
+        let op = String.intValue(Keyboard.readLine("input operand"));
+        return op;
     }
-
-
 }
