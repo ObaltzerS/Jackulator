@@ -1,5 +1,17 @@
 class Input {
+    
+    field String expression;
 
+    constructor Input new(){
+        return this;
+    }
+
+
+    function void getExpression () {
+        //let expression = Keyboard.readLine();
+        //return expression;
+        return;
+    }
 
 
 }

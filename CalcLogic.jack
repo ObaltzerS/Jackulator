@@ -56,7 +56,6 @@ class CalcLogic {
          return op3;
     }
  
-    /** Disposes this fraction. */
     method void dispose() {
        do Memory.deAlloc(this);  // uses an OS routine to recycle the memory held by the object
        return;

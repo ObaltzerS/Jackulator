@@ -2,8 +2,14 @@ class Main {
     function void main() {
         var CalcLogic calculator;
         var int result;
+        var String op1;
+        var String op2;
+        var int op1Int;
+        var int op2Int;
+        let op1 = (Keyboard.readLine("input first operand"));
+        let op2 = (Keyboard.readLine("input second operand"));
         let calculator = CalcLogic.new();
-        let result = calculator.factorial(5);
+        let result = calculator.multiply(String.intValue(op1), String.intValue(op2));
         do Output.printInt(result);
         return;
     }
