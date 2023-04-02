@@ -1,6 +1,6 @@
 class Input {
-    field String expression;
-    static int op;
+    static String operation;
+    static int operand;
 
     constructor Input new(){
         return this;
@@ -8,7 +8,19 @@ class Input {
 
 
     function int getOp () {
-        let op = String.intValue(Keyboard.readLine("input operand"));
-        return op;
+        let operand = String.intValue(Keyboard.readLine("input operand"));
+        return operand;
+    }
+
+    function CalcLogic getOperation() {
+        var CalcLogic calculator;
+        var int result;
+
+        let calculator = CalcLogic.new();
+        let operation = (Keyboard.readLine("input the operation you wish to perform"));
+        if (operation = "*"){
+            let result =  calculator.multiply(Input.getOp(), Input.getOp());
+        }
+        return result;
     }
 }

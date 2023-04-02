@@ -2,6 +2,7 @@ class Main {
     function void main() {
         var CalcLogic calculator;
         var int result;
+        do Input.getOperation();
         let calculator = CalcLogic.new();
         let result = calculator.multiply(Input.getOp(), Input.getOp());
         do Output.printInt(result);
