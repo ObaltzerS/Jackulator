@@ -1,10 +1,23 @@
+// class Main {
+//     function void main() {
+//         var CalcLogic calculator;
+//         var int result;
+//         var Input operation;
+//         let operation = Input.new();
+//         let result = operation.getOperation();
+//         do Output.printInt(result);
+//         return;
+//     }
+// }
+
 class Main {
     function void main() {
         var CalcLogic calculator;
         var int result;
         do Input.getOperation();
-        let calculator = CalcLogic.new();
-        let result = calculator.multiply(Input.getOp(), Input.getOp());
+        let result = Input.getOperation();
+        // let calculator = CalcLogic.new();
+        // let result = calculator.multiply(Input.getOp(), Input.getOp());
         do Output.printInt(result);
         return;
     }

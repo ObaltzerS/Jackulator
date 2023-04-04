@@ -35,7 +35,7 @@ class CalcLogic {
          return op1 * op2;
     }
 
-    method in factorial(int a) {
+    method int factorial(int a) {
          let op1 = a;
          let op2 = 1;
          while (op1 > 0) {
@@ -44,6 +44,7 @@ class CalcLogic {
          }
          return op2;
     }
+
 
     method int power(int a, int b) {
          let op1 = a;

@@ -1,12 +1,8 @@
-function Main.main 2
-call Input.getOperation 0
-pop temp 0
-call CalcLogic.new 0
-pop local 0
-push local 0
-call Input.getOp 0
-call Input.getOp 0
-call CalcLogic.multiply 3
+function Main.main 3
+call Input.new 0
+pop local 2
+push local 2
+call Input.getOperation 1
 pop local 1
 push local 1
 call Output.printInt 1

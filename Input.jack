@@ -6,20 +6,35 @@ class Input {
         return this;
     }
 
-
     function int getOp () {
-        let operand = String.intValue(Keyboard.readLine("input operand"));
+        let operand = String.intValue(Keyboard.readLine("Input operand: "));
         return operand;
     }
 
-    function CalcLogic getOperation() {
+
+    method int getOperation() {
         var CalcLogic calculator;
         var int result;
 
         let calculator = CalcLogic.new();
-        let operation = (Keyboard.readLine("input the operation you wish to perform"));
+        let operation = (Keyboard.readLine("Input the operation('*','/','+','-','!','^') you wish to perform: "));
         if (operation = "*"){
-            let result =  calculator.multiply(Input.getOp(), Input.getOp());
+            let result = calculator.multiply(Input.getOp(), Input.getOp());
+        }
+        if (operation = "/"){
+            let result = calculator.divide(Input.getOp(), Input.getOp());
+        }
+        if (operation = "+"){
+            let result = calculator.add(Input.getOp(), Input.getOp());
+        }
+        if (operation = "-"){
+            let result = calculator.subtract(Input.getOp(), Input.getOp());
+        }
+        if (operation = "!"){
+            let result = calculator.factorial(Input.getOp());
+        }
+        if (operation = "^"){
+            let result = calculator.power(Input.getOp(), Input.getOp());
         }
         return result;
     }
