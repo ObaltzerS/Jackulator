@@ -104,6 +104,94 @@ goto WHILE_EXP0
 label WHILE_END0
 push this 2
 return
+function CalcLogic.calculate 1
+push argument 0
+pop pointer 0
+push argument 1
+push constant 1
+call String.new 1
+push constant 42
+call String.appendChar 2
+eq
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+call Input.getOp 0
+call Input.getOp 0
+call calculator.multiply 2
+pop local 0
+label IF_FALSE0
+push argument 1
+push constant 1
+call String.new 1
+push constant 47
+call String.appendChar 2
+eq
+if-goto IF_TRUE1
+goto IF_FALSE1
+label IF_TRUE1
+call Input.getOp 0
+call Input.getOp 0
+call calculator.divide 2
+pop local 0
+label IF_FALSE1
+push argument 1
+push constant 1
+call String.new 1
+push constant 43
+call String.appendChar 2
+eq
+if-goto IF_TRUE2
+goto IF_FALSE2
+label IF_TRUE2
+call Input.getOp 0
+call Input.getOp 0
+call calculator.add 2
+pop local 0
+label IF_FALSE2
+push argument 1
+push constant 1
+call String.new 1
+push constant 45
+call String.appendChar 2
+eq
+if-goto IF_TRUE3
+goto IF_FALSE3
+label IF_TRUE3
+call Input.getOp 0
+call Input.getOp 0
+call calculator.subtract 2
+pop local 0
+label IF_FALSE3
+push argument 1
+push constant 1
+call String.new 1
+push constant 33
+call String.appendChar 2
+eq
+if-goto IF_TRUE4
+goto IF_FALSE4
+label IF_TRUE4
+call Input.getOp 0
+call calculator.factorial 1
+pop local 0
+label IF_FALSE4
+push argument 1
+push constant 1
+call String.new 1
+push constant 94
+call String.appendChar 2
+eq
+if-goto IF_TRUE5
+goto IF_FALSE5
+label IF_TRUE5
+call Input.getOp 0
+call Input.getOp 0
+call calculator.power 2
+pop local 0
+label IF_FALSE5
+push local 0
+return
 function CalcLogic.dispose 0
 push argument 0
 pop pointer 0

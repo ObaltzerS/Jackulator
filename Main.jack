@@ -12,9 +12,8 @@
 
 class Main {
     function void main() {
-        var CalcLogic calculator;
+        var Input Input;
         var int result;
-        do Input.getOperation();
         let result = Input.getOperation();
         // let calculator = CalcLogic.new();
         // let result = calculator.multiply(Input.getOp(), Input.getOp());

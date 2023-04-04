@@ -183,20 +183,9 @@ push constant 32
 call String.appendChar 2
 call Keyboard.readLine 1
 pop static 0
-push static 0
-push constant 1
-call String.new 1
-push constant 42
-call String.appendChar 2
-eq
-if-goto IF_TRUE0
-goto IF_FALSE0
-label IF_TRUE0
 push local 0
-call Input.getOp 0
-call Input.getOp 0
-call CalcLogic.multiply 3
+push static 0
+call CalcLogic.calculate 2
 pop local 1
-label IF_FALSE0
 push local 1
 return

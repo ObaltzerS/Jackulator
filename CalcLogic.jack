@@ -56,7 +56,30 @@ class CalcLogic {
          }
          return op3;
     }
- 
+
+    method int calculate(string operation){
+     var int result;
+     if ((operation = "*")){
+          let result = calculator.multiply(Input.getOp(), Input.getOp());
+          }
+     if ((operation = "/")){
+          let result = calculator.divide(Input.getOp(), Input.getOp());
+          }
+     if ((operation = "+")){
+          let result = calculator.add(Input.getOp(), Input.getOp());
+          }
+     if ((operation = "-")){
+          let result = calculator.subtract(Input.getOp(), Input.getOp());
+          }
+     if ((operation = "!")){
+          let result = calculator.factorial(Input.getOp());
+          }
+     if ((operation = "^")){
+          let result = calculator.power(Input.getOp(), Input.getOp());
+          }
+     return result;
+
+    }
     method void dispose() {
        do Memory.deAlloc(this);  // uses an OS routine to recycle the memory held by the object
        return;

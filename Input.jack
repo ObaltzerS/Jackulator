@@ -17,25 +17,8 @@ class Input {
         var int result;
 
         let calculator = CalcLogic.new();
-        let operation = (Keyboard.readLine("Input the operation('*','/','+','-','!','^') you wish to perform: "));
-        if (operation = "*"){
-            let result = calculator.multiply(Input.getOp(), Input.getOp());
-        }
-        if (operation = "/"){
-            let result = calculator.divide(Input.getOp(), Input.getOp());
-        }
-        if (operation = "+"){
-            let result = calculator.add(Input.getOp(), Input.getOp());
-        }
-        if (operation = "-"){
-            let result = calculator.subtract(Input.getOp(), Input.getOp());
-        }
-        if (operation = "!"){
-            let result = calculator.factorial(Input.getOp());
-        }
-        if (operation = "^"){
-            let result = calculator.power(Input.getOp(), Input.getOp());
-        }
+        let operation = (Keyboard.readLine("Input the operation('*','/','+','-','!','^') you wish to perform: "));        
+        let result = calculator.calculate(operation);
         return result;
     }
 }
