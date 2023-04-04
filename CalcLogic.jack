@@ -5,8 +5,6 @@ class CalcLogic {
    
     /** Constructs a (reduced) fraction from the given numerator and denominator. */
     constructor CalcLogic new() {
-         let op1 = 0;
-         let op2 = 0;
          return this;
     }
  
@@ -56,7 +54,44 @@ class CalcLogic {
          }
          return op3;
     }
- 
+
+    method int calculate(string operation, int a, int b){
+          var int result;
+          if (~(operation = "*")){
+               let result = multiply(a, b);
+               do Output.printInt(result);
+               return result;
+          }
+          if (~(operation = "/")){
+               let result = divide(a, b);
+               do Output.printInt(result);
+               return result;
+          }
+          if (~(operation = "+")){
+               let result = add(a, b);
+               do Output.printInt(result);
+               return result;
+          }
+          if (~(operation = "-")){
+               let result = subtract(a, b);
+               do Output.printInt(result);
+               return result;
+          }
+          if (~(operation = "!")){
+               let result = factorial(a);
+               do Output.printInt(result);
+               return result;
+          }
+          if (~(operation = "^")){
+               let result = power(a, b);
+               do Output.printInt(result);
+               return result;
+          }
+          // do Output.printInt(result);
+          // do Output.println();
+          return result;
+    }
+
     method void dispose() {
        do Memory.deAlloc(this);  // uses an OS routine to recycle the memory held by the object
        return;

@@ -2,10 +2,6 @@ function CalcLogic.new 0
 push constant 3
 call Memory.alloc 1
 pop pointer 0
-push constant 0
-pop this 0
-push constant 0
-pop this 1
 push pointer 0
 return
 function CalcLogic.add 0
@@ -103,6 +99,136 @@ pop this 1
 goto WHILE_EXP0
 label WHILE_END0
 push this 2
+return
+function CalcLogic.calculate 1
+push argument 0
+pop pointer 0
+push argument 1
+push constant 1
+call String.new 1
+push constant 42
+call String.appendChar 2
+eq
+not
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push pointer 0
+push argument 2
+push argument 3
+call CalcLogic.multiply 3
+pop local 0
+push local 0
+call Output.printInt 1
+pop temp 0
+push local 0
+return
+label IF_FALSE0
+push argument 1
+push constant 1
+call String.new 1
+push constant 47
+call String.appendChar 2
+eq
+not
+if-goto IF_TRUE1
+goto IF_FALSE1
+label IF_TRUE1
+push pointer 0
+push argument 2
+push argument 3
+call CalcLogic.divide 3
+pop local 0
+push local 0
+call Output.printInt 1
+pop temp 0
+push local 0
+return
+label IF_FALSE1
+push argument 1
+push constant 1
+call String.new 1
+push constant 43
+call String.appendChar 2
+eq
+not
+if-goto IF_TRUE2
+goto IF_FALSE2
+label IF_TRUE2
+push pointer 0
+push argument 2
+push argument 3
+call CalcLogic.add 3
+pop local 0
+push local 0
+call Output.printInt 1
+pop temp 0
+push local 0
+return
+label IF_FALSE2
+push argument 1
+push constant 1
+call String.new 1
+push constant 45
+call String.appendChar 2
+eq
+not
+if-goto IF_TRUE3
+goto IF_FALSE3
+label IF_TRUE3
+push pointer 0
+push argument 2
+push argument 3
+call CalcLogic.subtract 3
+pop local 0
+push local 0
+call Output.printInt 1
+pop temp 0
+push local 0
+return
+label IF_FALSE3
+push argument 1
+push constant 1
+call String.new 1
+push constant 33
+call String.appendChar 2
+eq
+not
+if-goto IF_TRUE4
+goto IF_FALSE4
+label IF_TRUE4
+push pointer 0
+push argument 2
+call CalcLogic.factorial 2
+pop local 0
+push local 0
+call Output.printInt 1
+pop temp 0
+push local 0
+return
+label IF_FALSE4
+push argument 1
+push constant 1
+call String.new 1
+push constant 94
+call String.appendChar 2
+eq
+not
+if-goto IF_TRUE5
+goto IF_FALSE5
+label IF_TRUE5
+push pointer 0
+push argument 2
+push argument 3
+call CalcLogic.power 3
+pop local 0
+push local 0
+call Output.printInt 1
+pop temp 0
+push local 0
+return
+label IF_FALSE5
+push local 0
 return
 function CalcLogic.dispose 0
 push argument 0

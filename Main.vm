@@ -1,8 +1,9 @@
 function Main.main 3
-call Input.new 0
+call CalcLogic.new 0
 pop local 2
+push local 0
 push local 2
-call Input.getOperation 1
+call Input.getOperation 2
 pop local 1
 push local 1
 call Output.printInt 1

@@ -1,41 +1,26 @@
 class Input {
     static String operation;
-    static int operand;
+    // static int operand;
 
     constructor Input new(){
         return this;
     }
 
-    function int getOp () {
+    method int getOp () {
+        var int operand;
         let operand = String.intValue(Keyboard.readLine("Input operand: "));
         return operand;
     }
 
 
-    method int getOperation() {
-        var CalcLogic calculator;
+    method int getOperation(CalcLogic calculator) {
         var int result;
-
-        let calculator = CalcLogic.new();
-        let operation = (Keyboard.readLine("Input the operation('*','/','+','-','!','^') you wish to perform: "));
-        if (operation = "*"){
-            let result = calculator.multiply(Input.getOp(), Input.getOp());
-        }
-        if (operation = "/"){
-            let result = calculator.divide(Input.getOp(), Input.getOp());
-        }
-        if (operation = "+"){
-            let result = calculator.add(Input.getOp(), Input.getOp());
-        }
-        if (operation = "-"){
-            let result = calculator.subtract(Input.getOp(), Input.getOp());
-        }
-        if (operation = "!"){
-            let result = calculator.factorial(Input.getOp());
-        }
-        if (operation = "^"){
-            let result = calculator.power(Input.getOp(), Input.getOp());
-        }
+        var int op1;
+        var int op2;
+        let operation = Keyboard.readLine("Input the operation('*','/','+','-','!','^') you wish to perform: ");        
+        let op1 = getOp();
+        let op2 = getOp();
+        let result = calculator.calculate(operation, op1, op2);
         return result;
     }
 }
