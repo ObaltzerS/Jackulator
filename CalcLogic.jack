@@ -59,6 +59,7 @@ class CalcLogic {
 
     method int calculate(string operation){
      var int result;
+     let result = 6;
      if ((operation = "*")){
           let result = calculator.multiply(Input.getOp(), Input.getOp());
           }
